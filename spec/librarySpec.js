@@ -1,13 +1,12 @@
 
-var Library = require('../');
-var assert = require('assert');
+const Library = require('../');
 
 describe('Library', function () {
 
   it('should return a `Library` instance', function () {
     // no arguments (or null) means to dlopen the currently running process
-    var lib = new Library();
-    assert(lib instanceof Library);
+    const lib = new Library();
+    expect(lib).toEqual(jasmine.any(Library));
   });
 
 });
